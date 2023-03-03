@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# SBJang React App Boilerplate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+이 소스는 개인용 리액트 앱 개발시 초기 코드로 사용할 목적으로 만들어 두었습니다.
 
-## Available Scripts
+## 구성 요약 
 
-In the project directory, you can run:
+- CRA 기본 옵션으로 생성
+  - "react": "^18.2.0"
+  - "react-dom": "^18.2.0"
 
-### `yarn start`
+- 리액트 라우터
+  - "react-router-dom": "^6.8.1",
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 상태관리 zustand
+  - "zustand": "^4.3.3"
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- MUI와 머터리얼 아이콘 포함
+  - "@mui/material": "^5.11.8",
+  - "@mui/icons-material": "^5.11.0",
 
-### `yarn test`
+### React &amp; CRA (Create React App) 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- https://create-react-app.dev
+- https://github.com/facebook/create-react-app
 
-### `yarn build`
+```
+yarn create react-app react-app
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### test 모듈 및 코드 제거
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### 디렉토르 구조 변경
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### `.eslintrc` 린트 수정
+- "react-hooks/exhaustive-deps": "off"
+  - uesEffect 등에서 wran 떠서...
 
-### `yarn eject`
+### MUI(Material UI) 설정
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- https://mui.com/
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+yarn add @mui/material @emotion/react @emotion/styled
+yarn add @mui/icons-material
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Drawer 예제이 있는 컴포넌트를 여러 파일로 분리
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### React Router
 
-## Learn More
+- https://reactrouter.com/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+yarn add react-router-dom localforage match-sorter sort-by
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+페이지별 url 주소를 나누기 위해 사용
 
-### Code Splitting
+### zustand 상태관리
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- https://github.com/pmndrs/zustand
 
-### Analyzing the Bundle Size
+```
+yarn add zustand
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+상태관리 라이브러리로 zustand 추가
